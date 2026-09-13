@@ -1,0 +1,18 @@
+# Core data / ML stack
+pandas>=1.5
+numpy>=1.23
+xgboost>=1.7
+scikit-learn>=1.1
+tqdm>=4.64
+pytz>=2022.1
+
+# Live dashboard (dashboard_appz4.py)
+fastapi>=0.100
+uvicorn[standard]>=0.23
+websockets>=11.0
+
+# MetaTrader5 terminal integration — Windows only.
+# Required only for get_vix75_history.py (historical data export) and for
+# dashboard_appz4.py's live/demo trading loop. Not required for parsing,
+# fusion, labeling, training, or backtesting, which are all OS-independent.
+MetaTrader5>=5.0.45 ; sys_platform == 'win32'
